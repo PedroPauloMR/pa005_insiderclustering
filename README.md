@@ -1,26 +1,28 @@
 # Insiders - Clustering
 
 ### Business Problem
-    - Identify the most valuable clients to create a benefit program
+    
+- Identify the most valuable clients to create a benefit program
     
 ### Questions to answer
 1. Nomination of people who will be part of the Insiders program
-     - List: 
-     client_id | is_insider |
-     |:--------:|:---------:|
-    |10323      |    yes / 1|
-    |32413      |    no / 1|
+
+- List: 
+client_id | is_insider |
+|:-------:|:---------:|
+|10323      |    yes / 1|
+|32413      |    no / 1|
              
 2. Report with business questions:
-     - Who are the people eligible to participate in the Insiders program?
-     - How many customers will be part of the group?
-     - What are the main characteristics of these customers?
-     - What percentage of revenue is contributed by Insiders?
-     - What is the expected revenue for this group in the coming months?
-     - What are the conditions for a person to be eligible for Insiders?
-     - What are the conditions for a person to be removed from Insiders?
-     - What is the guarantee that the Insiders program is better than the rest of the base?
-     - What actions can the marketing team take to increase revenue?
+- Who are the people eligible to participate in the Insiders program?
+- How many customers will be part of the group?
+- What are the main characteristics of these customers?
+- What percentage of revenue is contributed by Insiders?
+- What is the expected revenue for this group in the coming months?
+- What are the conditions for a person to be eligible for Insiders?
+- What are the conditions for a person to be removed from Insiders?
+- What is the guarantee that the Insiders program is better than the rest of the base?
+- What actions can the marketing team take to increase revenue?
 
 
 ## About the dataset
@@ -63,26 +65,6 @@ Sales registers of an e-commerce for one year (11/2015 to 12/2017)
 - qtde_returns: sum of all quantity per customer in returns
 - avg_basket_size: number of unique invoice_no divided by the sum of all quantity (per client)
 - avg_unique_basket_size: number of unique invoice_no divided by the number of unique stock_code (per client)
-
-
-
-## Univariate Analysis
-> Part 1
-
-![](img/univariate_analysis.PNG)
-
-- AMOUNT higher concentration: between 59873.14 and 442412.39
-- Origin old balance minor concentration: between 8102.08 and 162753.79
-
-
-
-> Part 2
-
-![](img/univariate_analysis2.PNG)
-
-- Cash-out and payment represent the major part of the total transactions.
-- The great majority of the transactions are not flagged as fraud.
-
 
 
 
@@ -155,14 +137,14 @@ Sales registers of an e-commerce for one year (11/2015 to 12/2017)
 
 | cluster  |  customer_id  |  perc_cluster  |  gross_revenue  |  recency_days  |  qtde_products  |  frequency  |  qtde_returns|
 |:--------:|:-------------:|:--------------:|:---------------:|:---------------:|:--------------:|:-----------:|:-----------:|
-	6  |  480  |  8.4284  |  8653.0858  |  3.5979	308.9396  |  0.0582  |  99.7750
-	3  |  748  |  13.1343  |  2151.4094  |  14.4920  |  120.3703  |  0.0367  |  26.2353
-	2  |  785  |  13.7840  |  1705.2666  |  41.7962  |  98.8904  |  0.0282  |  14.7019
-	7  |  305  |  5.3556  |  1344.3750  |  85.8361  |  66.1607  |  0.0263  |  7.7902
-	0  |  452  |  7.9368  |  1029.1473  |  20.0088  |  82.7832  |  1.0540  |  1.2987
-	1  |  472  |  8.2880  |  745.2326  |  228.2225  |  44.8051  |  0.4639  |  7.7161
-	4  |  724  |  12.7129  |  728.6587  |  212.0414  |  49.5359  |  1.0068  |  3.7818
-	5  |  1729  |  30.3600	722.0573  |  187.4297  |  55.9740  |  0.9294  |  51.8641
+|6  |  480  |  8.4284  |  8653.0858  |  3.5979	308.9396  |  0.0582  |  99.7750|
+|3  |  748  |  13.1343  |  2151.4094  |  14.4920  |  120.3703  |  0.0367  |  26.2353|
+|2  |  785  |  13.7840  |  1705.2666  |  41.7962  |  98.8904  |  0.0282  |  14.7019|
+|7  |  305  |  5.3556  |  1344.3750  |  85.8361  |  66.1607  |  0.0263  |  7.7902|
+|0  |  452  |  7.9368  |  1029.1473  |  20.0088  |  82.7832  |  1.0540  |  1.2987|
+|1  |  472  |  8.2880  |  745.2326  |  228.2225  |  44.8051  |  0.4639  |  7.7161|
+|4  |  724  |  12.7129  |  728.6587  |  212.0414  |  49.5359  |  1.0068  |  3.7818|
+|5  |  1729  |  30.3600	722.0573  |  187.4297  |  55.9740  |  0.9294  |  51.8641|
 
 
 - Possible nomination:
