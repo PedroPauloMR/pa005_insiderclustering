@@ -8,10 +8,11 @@
 1. Nomination of people who will be part of the Insiders program
 
 - List: 
-client_id | is_insider |
+
+|client_id | is_insider |
 |:-------:|:---------:|
-|10323      |    yes / 1|
-|32413      |    no / 1|
+|10323      |    yes / 1 |
+|32413      |    no / 1 |
              
 2. Report with business questions:
 - Who are the people eligible to participate in the Insiders program?
@@ -39,11 +40,11 @@ Sales registers of an e-commerce for one year (11/2015 to 12/2017)
 
 - Create a missing customer_id dataframe and generate random data starting in the max value of non missinn customer_id;
 - Combine this "random customer_id" with the original dataset;
-- 'unit_price:  > 0.040
-- stock_code: not in ['POST', 'D', 'DOT', 'M', 'S', 'AMAZONFEE', 'm', 'DCGSSBOY','DCGSSGIRL', 'PADS', 'B', 'CRUK']
-- Eliminate "description"
-- country: not in ['Unspecified','European Community']
-- customer_id: not in [16446]
+- **unit_price**:  > 0.040
+- **stock_code**: not in ['POST', 'D', 'DOT', 'M', 'S', 'AMAZONFEE', 'm', 'DCGSSBOY','DCGSSGIRL', 'PADS', 'B', 'CRUK']
+- Eliminate "**description**"
+- **country**: not in ['Unspecified','European Community']
+- **customer_id**: not in [16446]
 - Create a dataframe of purchases: quantity >= 0
 - Create a dataframe of returns: quantity <> 0
 
@@ -52,38 +53,38 @@ Sales registers of an e-commerce for one year (11/2015 to 12/2017)
 
 ## Feature Engineering
 
-- Drop columns: ['invoice_no', 'stock_code', 'quantity', 'invoice_date','unit_price', 'country']
-- gross_revenue: quantity x unit_price (all purchases)
-- monetary: aggregate "sum" of gross_revenue
-- recency: aggregate "max" of invoice_date and got the time in days
-- qtde_invoices: count non duplicated 'invoice_no' from purchases
-- qtde_items: aggregated sum of quantity of purchases
-- qtde_products: count of stock_code in purchases
-- avg_ticket: aggregated mean of gross_revenue in purchases
-- avg_recency_days: aggregated mean of non duplicated dates by differences between the purchases of a client
-- frequency: count of non duplicated invoice_no divided by the dys between max and min invoice_date
-- qtde_returns: sum of all quantity per customer in returns
-- avg_basket_size: number of unique invoice_no divided by the sum of all quantity (per client)
-- avg_unique_basket_size: number of unique invoice_no divided by the number of unique stock_code (per client)
+- Drop columns: `['invoice_no', 'stock_code', 'quantity', 'invoice_date','unit_price', 'country']`
+- **gross_revenue**: `quantity x unit_price (all purchases)`
+- **monetary**: `aggregate "sum" of gross_revenue`
+- **recency**: `aggregate "max" of invoice_date and got the time in days`
+- **qtde_invoices**: `count non duplicated 'invoice_no' from purchases`
+- **qtde_items**: `aggregated sum of quantity of purchases`
+- **qtde_products**: `count of stock_code in purchases`
+- **avg_ticket**: `aggregated mean of gross_revenue in purchases`
+- **avg_recency_days**: `aggregated mean of non duplicated dates by differences between the purchases of a client`
+- **frequency**: `count of non duplicated invoice_no divided by the dys between max and min invoice_date`
+- **qtde_returns**: `sum of all quantity per customer in returns`
+- **avg_basket_size**: `number of unique invoice_no divided by the sum of all quantity (per client)`
+- **avg_unique_basket_size**: `number of unique invoice_no divided by the number of unique stock_code (per client)`
 
 
 
 
 ## Pre-Processing
 
-- **MinMaxScaler**: [gross_revenue, recency_days,qtde_invoices,qtde_items,qtde_products,avg_ticket,avg_recency_days,frequency,qtde_returns,avg_basket_size,avg_unique_basket_size]
+- **MinMaxScaler**: `[gross_revenue, recency_days,qtde_invoices,qtde_items,qtde_products,avg_ticket,avg_recency_days,frequency,qtde_returns,avg_basket_size,avg_unique_basket_size]`
 
 
 ## Feature Selection
 
-- Columns selected: ['customer_id','gross_revenue','recency_days','qtde_products','frequency','qtde_returns']
+- Columns selected: `['customer_id','gross_revenue','recency_days','qtde_products','frequency','qtde_returns']`
 
 
 
 ## Data Preparation
-- Space transformation with: PCA, T-SNE, UMAP, RandomForestRegressor + UMAP
+- Space transformation with: `PCA, T-SNE, UMAP, RandomForestRegressor + UMAP`
 
-- T-SNE Example:
+- **T-SNE Example**:
 
 ![](img/tsne_example.png)
 
@@ -127,8 +128,8 @@ Sales registers of an e-commerce for one year (11/2015 to 12/2017)
 
 ## Model Performance
 
-- Model chosen: GMM
-- Number of groups: 8
+- Model chosen: **GMM**
+- Number of groups: **8**
 
 ![](img/gmm_chosen.png)
 
@@ -148,14 +149,14 @@ Sales registers of an e-commerce for one year (11/2015 to 12/2017)
 
 
 - Possible nomination:
-    - 6: Cluster Insiders
-    - 3: Cluster More Products
-    - 2: Cluster Spend Money
-    - 7: Cluster Even More Products
-    - 0: Cluster Less Days
-    - 1: Cluster Less 1k
-    - 4: Cluster Stop Returners
-    - 5: Cluster More Buy
+    - **6**: Cluster Insiders
+    - **3**: Cluster More Products
+    - **2**: Cluster Spend Money
+    - **7**: Cluster Even More Products
+    - **0**: Cluster Less Days
+    - **1**: Cluster Less 1k
+    - **4**: Cluster Stop Returners
+    - **5**: Cluster More Buy
 
 
 ![](img/clusters_result.PNG)
