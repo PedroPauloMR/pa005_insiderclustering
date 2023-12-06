@@ -40,13 +40,13 @@ Sales registers of an e-commerce for one year (11/2015 to 12/2017)
 
 - Create a missing customer_id dataframe and generate random data starting in the max value of non missinn customer_id;
 - Combine this "random customer_id" with the original dataset;
-- **unit_price**:  > 0.040
-- **stock_code**: not in ['POST', 'D', 'DOT', 'M', 'S', 'AMAZONFEE', 'm', 'DCGSSBOY','DCGSSGIRL', 'PADS', 'B', 'CRUK']
+- **unit_price**:  `> 0.040`
+- **stock_code**: not in `['POST', 'D', 'DOT', 'M', 'S', 'AMAZONFEE', 'm', 'DCGSSBOY','DCGSSGIRL', 'PADS', 'B', 'CRUK']`
 - Eliminate "**description**"
-- **country**: not in ['Unspecified','European Community']
-- **customer_id**: not in [16446]
-- Create a dataframe of purchases: quantity >= 0
-- Create a dataframe of returns: quantity <> 0
+- **country**: not in `['Unspecified','European Community']`
+- **customer_id**: not in `[16446]`
+- Create a dataframe of purchases: `quantity >= 0`
+- Create a dataframe of returns: `quantity < 0`
 
 
 
@@ -138,14 +138,14 @@ Sales registers of an e-commerce for one year (11/2015 to 12/2017)
 
 | cluster  |  customer_id  |  perc_cluster  |  gross_revenue  |  recency_days  |  qtde_products  |  frequency  |  qtde_returns|
 |:--------:|:-------------:|:--------------:|:---------------:|:---------------:|:--------------:|:-----------:|:-----------:|
-|6  |  480  |  8.4284  |  8653.0858  |  3.5979	308.9396  |  0.0582  |  99.7750|
-|3  |  748  |  13.1343  |  2151.4094  |  14.4920  |  120.3703  |  0.0367  |  26.2353|
-|2  |  785  |  13.7840  |  1705.2666  |  41.7962  |  98.8904  |  0.0282  |  14.7019|
-|7  |  305  |  5.3556  |  1344.3750  |  85.8361  |  66.1607  |  0.0263  |  7.7902|
-|0  |  452  |  7.9368  |  1029.1473  |  20.0088  |  82.7832  |  1.0540  |  1.2987|
-|1  |  472  |  8.2880  |  745.2326  |  228.2225  |  44.8051  |  0.4639  |  7.7161|
-|4  |  724  |  12.7129  |  728.6587  |  212.0414  |  49.5359  |  1.0068  |  3.7818|
-|5  |  1729  |  30.3600	722.0573  |  187.4297  |  55.9740  |  0.9294  |  51.8641|
+|6  |  480  |  8.4284   |  8653.0858  |  3.5979	   | 308.9396   |  0.0582  |  99.7750 |
+|3  |  748  |  13.1343  |  2151.4094  |  14.4920   |  120.3703  |  0.0367  |  26.2353 |
+|2  |  785  |  13.7840  |  1705.2666  |  41.7962   |  98.8904   |  0.0282  |  14.7019 |
+|7  |  305  |  5.3556   |  1344.3750  |  85.8361   |  66.1607   |  0.0263  |  7.7902  |
+|0  |  452  |  7.9368   |  1029.1473  |  20.0088   |  82.7832   |  1.0540  |  1.2987  |
+|1  |  472  |  8.2880   |  745.2326   |  228.2225  |  44.8051   |  0.4639  |  7.7161  |
+|4  |  724  |  12.7129  |  728.6587   |  212.0414  |  49.5359   |  1.0068  |  3.7818  |
+|5  |  1729 |  30.3600	|  722.0573   |  187.4297  |  55.9740   |  0.9294  |  51.8641  |
 
 
 - Possible nomination:
